@@ -33,8 +33,8 @@ homepage 'https://httpd.apache.org/'
       "--mandir=#{man}",
       "--disable-debug",
       "--disable-dependency-tracking",
-      "--with-mpm=prefork",
       "--with-included-apr",
+      "--enable-mpms-shared=all",
       "--enable-mods-shared=all",
       "--with-pcre=#{Formula.factory('pcre').prefix}",
       "--enable-layout=Homebrew"
