@@ -47,9 +47,6 @@ homepage 'https://httpd.apache.org/'
 
     (var+"log/apache2").mkpath
     (var+"run/apache2").mkpath
-
-#    plist_path.write startup_plist
-#    plist_path.chmod 0644
   end
 
   def apache_layout
