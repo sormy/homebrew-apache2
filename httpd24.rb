@@ -48,8 +48,8 @@ homepage 'https://httpd.apache.org/'
     (var+"log/apache2").mkpath
     (var+"run/apache2").mkpath
 
-    plist_path.write startup_plist
-    plist_path.chmod 0644
+#    plist_path.write startup_plist
+#    plist_path.chmod 0644
   end
 
   def apache_layout
@@ -79,7 +79,7 @@ homepage 'https://httpd.apache.org/'
       EOS
   end
 
-  def startup_plist; <<-EOS.undent
+  def plist; <<-EOS.undent
     <?xml version="1.0" encoding="UTF-8"?>
     <!DOCTYPE plist PUBLIC "-//Apple Computer//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
     <plist version="1.0">
