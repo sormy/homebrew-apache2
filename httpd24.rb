@@ -85,7 +85,7 @@ homepage 'https://httpd.apache.org/'
       <string>#{plist_name}</string>
       <key>ProgramArguments</key>
       <array>
-        <string>#{opt_prefix}/sbin/apachectl</string>
+        <string>#{opt_prefix}/bin/apachectl</string>
         <string>start</string>
       </array>
       <key>RunAtLoad</key>
