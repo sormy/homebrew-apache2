@@ -9,4 +9,4 @@ homebrew-apache2
 **Installation**
 
     brew tap bpresles/homebrew-apache2
-    brew install bpresles/httpd24
+    brew install bpresles/apache2/httpd24
