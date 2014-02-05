@@ -13,6 +13,23 @@ homebrew-apache2
 
 **Configuration**
 
+You must configure a MPM module on /usr/local/etc/apache2/httpd.conf before using this apache build.
+To do so, add the following line to the config file:
+
+For prefork MPM:
+
+LoadModule mpm_prefork_module lib/apache2/modules/mod_mpm_prefork.so
+
+For worker MPM:
+
+LoadModule mpm_worker_module lib/apache2/modules/mod_mpm_worker.so
+
+For event MPM:
+
+LoadModule mpm_event_module lib/apache2/modules/mod_mpm_event.so
+
+**Using PHP**
+
 To use PHP with this apache formula, you must install (or reinstall) php55 with --homebrew-apxs option:
 
     brew install php55 --homebrew-apxs
