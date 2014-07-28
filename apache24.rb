@@ -87,7 +87,14 @@ homepage 'https://httpd.apache.org/'
       <string>#{plist_name}</string>
       <key>ProgramArguments</key>
       <array>
-        <string>#{opt_prefix}/bin/apachectl</string>
+        <string>#{opt_prefix}/bin/httpd</string>
+        <string>-d</string>
+        <string>#{opt_prefix}</string>
+        <string>-f</string>
+        <string>#{etc}/apache2/httpd.conf</string>
+        <string>-E</string>
+        <string>#{var}/log/apache2/startup_log</string>
+        <string>-k</string>
         <string>start</string>
       </array>
       <key>RunAtLoad</key>
