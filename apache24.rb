@@ -3,8 +3,8 @@ require 'formula'
 class Apache24 < Formula
 
 homepage 'https://httpd.apache.org/'
-  url 'http://mirror.cc.columbia.edu/pub/software/apache/httpd/httpd-2.4.9.tar.bz2'
-  sha1 '646aedbf59519e914c424b3a85d846bf189be3f4'
+  url 'http://mirror.cc.columbia.edu/pub/software/apache/httpd/httpd-2.4.12.tar.bz2'
+  sha256 'ad6d39edfe4621d8cc9a2791f6f8d6876943a9da41ac8533d77407a2e630eae4'
 
   skip_clean ['bin', 'sbin', 'logs']
 
@@ -14,7 +14,7 @@ homepage 'https://httpd.apache.org/'
   # Apache 2.4 no longer bundles apr or apr-util so we have to fetch
   # it manually for each build
   def fetch_apr
-    ["apr-1.5.1", "apr-util-1.5.3"].each do |tb|
+    ["apr-1.5.2", "apr-util-1.5.4"].each do |tb|
       curl "-s", "-o", "#{tb}.tar.gz", "https://www.apache.org/dist/apr/#{tb}.tar.gz"
       system "tar -xzf #{tb}.tar.gz"
       dir = tb.rpartition('-')[0]
